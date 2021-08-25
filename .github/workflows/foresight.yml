@@ -34,4 +34,4 @@ jobs:
         with:
           apikey: ${{ secrets.THUNDRA_APIKEY }}
           project_id: ${{ secrets.PROJECT_ID }}
-          command: mvn clean install
+          command: mvn clean install -Dmaven.test.failure.ignore=true
