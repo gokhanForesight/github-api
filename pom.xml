@@ -283,7 +283,7 @@
             <configuration>
               <excludesFile>src/test/resources/slow-or-flaky-tests.txt</excludesFile>
               <argLine>@{jacoco.surefire.argLine} ${surefire.argLine}</argLine>
-              <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=45538416-9c3b-4f33-8007-59cb56361a10 -Dthundra.agent.test.project.id=779a3206-e329-4331-bc04-4f73e7aff120</argLine>
+              <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=b3b268ca-ff42-11eb-9a03-0242ac130003 -Dthundra.agent.test.project.id=cad93ef4-66ad-4b62-9c6e-cf643517d2e9</argLine>
             </configuration>
           </execution>
         </executions>
@@ -292,7 +292,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
         <configuration>
-          <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=45538416-9c3b-4f33-8007-59cb56361a10 -Dthundra.agent.test.project.id=779a3206-e329-4331-bc04-4f73e7aff120</argLine>
+          <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=b3b268ca-ff42-11eb-9a03-0242ac130003 -Dthundra.agent.test.project.id=cad93ef4-66ad-4b62-9c6e-cf643517d2e9</argLine>
         </configuration>
         <executions>
           <execution>
@@ -607,7 +607,7 @@
                     flaky. Run them here. -->
                   <includesFile>src/test/resources/slow-or-flaky-tests.txt</includesFile>
                   <argLine>@{jacoco.surefire.argLine} ${surefire.argLine}</argLine>
-                  <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=45538416-9c3b-4f33-8007-59cb56361a10 -Dthundra.agent.test.project.id=779a3206-e329-4331-bc04-4f73e7aff120</argLine>
+                  <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=b3b268ca-ff42-11eb-9a03-0242ac130003 -Dthundra.agent.test.project.id=cad93ef4-66ad-4b62-9c6e-cf643517d2e9</argLine>
                 </configuration>
               </execution>
             </executions>
@@ -616,7 +616,7 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
             <configuration>
-              <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=45538416-9c3b-4f33-8007-59cb56361a10 -Dthundra.agent.test.project.id=779a3206-e329-4331-bc04-4f73e7aff120</argLine>
+              <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=b3b268ca-ff42-11eb-9a03-0242ac130003 -Dthundra.agent.test.project.id=cad93ef4-66ad-4b62-9c6e-cf643517d2e9</argLine>
             </configuration>
             <executions>
               <execution>
