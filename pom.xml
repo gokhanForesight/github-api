@@ -63,13 +63,13 @@
         <version>1.11.2</version>
       </extension>
       <!-- Doing site publishing manually for now -->
-<!--
-      <extension>
-        <groupId>org.kohsuke</groupId>
-        <artifactId>wagon-gitsite</artifactId>
-        <version>0.3.5</version>
-      </extension>
--->
+      <!--
+            <extension>
+              <groupId>org.kohsuke</groupId>
+              <artifactId>wagon-gitsite</artifactId>
+              <version>0.3.5</version>
+            </extension>
+      -->
     </extensions>
     <testResources>
       <testResource>
@@ -166,7 +166,7 @@
                       <exclude>org.kohsuke.github.extras.OkHttp3Connector</exclude>
                       <exclude>org.kohsuke.github.EnforcementLevel</exclude>
                       <exclude>org.kohsuke.github.GHPerson.1</exclude>
-                      
+
                       <!-- TODO: Some coverage, but more needed -->
                       <exclude>org.kohsuke.github.GHPullRequestReviewBuilder.DraftReviewComment</exclude>
                       <exclude>org.kohsuke.github.GHIssue.PullRequest</exclude>
@@ -283,7 +283,23 @@
             <configuration>
               <excludesFile>src/test/resources/slow-or-flaky-tests.txt</excludesFile>
               <argLine>@{jacoco.surefire.argLine} ${surefire.argLine}</argLine>
+              <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=45538416-9c3b-4f33-8007-59cb56361a10 -Dthundra.agent.test.project.id=779a3206-e329-4331-bc04-4f73e7aff120</argLine>
             </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <configuration>
+          <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=45538416-9c3b-4f33-8007-59cb56361a10 -Dthundra.agent.test.project.id=779a3206-e329-4331-bc04-4f73e7aff120</argLine>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>
@@ -591,7 +607,23 @@
                     flaky. Run them here. -->
                   <includesFile>src/test/resources/slow-or-flaky-tests.txt</includesFile>
                   <argLine>@{jacoco.surefire.argLine} ${surefire.argLine}</argLine>
+                  <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=45538416-9c3b-4f33-8007-59cb56361a10 -Dthundra.agent.test.project.id=779a3206-e329-4331-bc04-4f73e7aff120</argLine>
                 </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <configuration>
+              <argLine>-javaagent:./thundra-agent-bootstrap-2.7.22.jar -Dthundra.agent.report.rest.baseurl=https://collector.thundra.us/v1 -Dthundra.apiKey=45538416-9c3b-4f33-8007-59cb56361a10 -Dthundra.agent.test.project.id=779a3206-e329-4331-bc04-4f73e7aff120</argLine>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>integration-test</goal>
+                  <goal>verify</goal>
+                </goals>
               </execution>
             </executions>
           </plugin>
